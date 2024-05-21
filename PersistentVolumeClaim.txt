@@ -1,0 +1,14 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: nix-vol
+  namespace: nix-test
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 50Gi
+  volumeName: pvc-65d561a1-5e23-4925-88ae-9810a392d297
+  storageClassName: managed-csi
+  volumeMode: Filesystem
